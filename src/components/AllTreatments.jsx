@@ -65,21 +65,21 @@ const treatments = [
 
 const AllTreatments = () => {
   return (
-    <main className="bg-[#f6fbf7] pt-32 pb-20">
+    <main className="bg-[#f4f8ff] pt-32 pb-20">
       <section className="mx-auto max-w-7xl px-4">
         <div className="mx-auto mb-12 max-w-4xl text-center">
-          <span className="inline-flex rounded-full bg-green-700 px-5 py-2 text-sm font-bold text-white">
-            Radiografía y presupuesto gratis
+          <span className="inline-flex rounded-full bg-blue-700 px-5 py-2 text-sm font-bold text-white">
+            Tratamientos personalizados
           </span>
 
-          <h1 className="mt-6 text-4xl font-extrabold leading-tight text-green-700 sm:text-5xl">
+          <h1 className="mt-6 text-4xl font-extrabold leading-tight text-blue-700 sm:text-5xl">
             Tratamientos dentales y precios orientativos
           </h1>
 
           <p className="mt-5 text-lg leading-8 text-neutral-700">
-            Consulta nuestros tratamientos más habituales. Para recibir una
-            valoración personalizada, consulte con la doctora o contacte con
-            nuestra clínica.
+            Consulta algunos de los tratamientos más habituales de IMAGEN DENTAL
+            PABLO NERUDA. Para recibir una valoración personalizada, contacta
+            con nuestra clínica dental en Puente de Vallecas.
           </p>
         </div>
 
@@ -87,12 +87,12 @@ const AllTreatments = () => {
           {treatments.map((treatment, index) => (
             <article
               key={index}
-              className="overflow-hidden rounded-3xl bg-white shadow-[0_10px_30px_rgba(22,101,52,0.10)] transition hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(22,101,52,0.16)]"
+              className="overflow-hidden rounded-3xl bg-white shadow-[0_10px_30px_rgba(37,99,235,0.10)] transition hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(37,99,235,0.16)]"
             >
               <div className="h-48 overflow-hidden">
                 <img
                   src={treatment.image}
-                  alt={`${treatment.name} en Usera - Clínica Dental Dra. Anna Tavarone`}
+                  alt={`${treatment.name} en Puente de Vallecas - IMAGEN DENTAL PABLO NERUDA`}
                   className="h-full w-full object-cover transition duration-500 hover:scale-105"
                   loading="lazy"
                 />
@@ -101,7 +101,7 @@ const AllTreatments = () => {
               <div className="p-6">
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <h2 className="text-2xl font-extrabold text-green-700">
+                    <h2 className="text-2xl font-extrabold text-blue-700">
                       {treatment.name}
                     </h2>
 
@@ -112,14 +112,14 @@ const AllTreatments = () => {
                     )}
                   </div>
 
-                  <p className="shrink-0 rounded-xl bg-green-100 px-4 py-2 text-xl font-extrabold text-green-700">
+                  <p className="shrink-0 rounded-xl bg-blue-100 px-4 py-2 text-xl font-extrabold text-blue-700">
                     {treatment.price}
                   </p>
                 </div>
 
                 <a
                   href="/#contacto"
-                  className="mt-6 inline-flex font-bold text-green-700 transition hover:text-green-900"
+                  className="mt-6 inline-flex font-bold text-blue-700 transition hover:text-blue-900"
                 >
                   Más información →
                 </a>
@@ -128,20 +128,20 @@ const AllTreatments = () => {
           ))}
         </div>
 
-        <div className="mx-auto mt-14 max-w-5xl rounded-3xl bg-white px-8 py-10 text-center shadow-[0_10px_30px_rgba(22,101,52,0.10)]">
-          <h2 className="text-3xl font-extrabold text-green-700">
+        <div className="mx-auto mt-14 max-w-5xl rounded-3xl bg-white px-8 py-10 text-center shadow-[0_10px_30px_rgba(37,99,235,0.10)]">
+          <h2 className="text-3xl font-extrabold text-blue-700">
             ¿Necesitas otro tratamiento?
           </h2>
 
           <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-neutral-700">
-            Si necesita un tratamiento adicional que no aparece en esta página,
-            no dude en consultar con nuestro equipo. Le atenderemos personalmente
+            Si necesitas un tratamiento adicional que no aparece en esta página,
+            no dudes en consultar con nuestro equipo. Te atenderemos personalmente
             en nuestra clínica o llamando al{' '}
             <a
-              href="tel:914763069"
-              className="inline-block whitespace-nowrap font-extrabold text-green-700 hover:underline"
+              href="tel:917789339"
+              className="inline-block whitespace-nowrap font-extrabold text-blue-700 hover:underline"
             >
-              914 76 30 69
+              917 78 93 39
             </a>
             .
           </p>
@@ -149,14 +149,14 @@ const AllTreatments = () => {
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <a
               href="/#contacto"
-              className="rounded-xl bg-green-700 px-8 py-4 text-lg font-bold text-white shadow-lg transition hover:bg-green-800"
+              className="rounded-xl bg-blue-700 px-8 py-4 text-lg font-bold text-white shadow-lg transition hover:bg-blue-800"
             >
               Más información
             </a>
 
             <a
-              href="tel:914763069"
-              className="rounded-xl border-2 border-green-700 px-8 py-4 text-lg font-bold text-green-700 transition hover:bg-green-700 hover:text-white"
+              href="tel:917789339"
+              className="rounded-xl border-2 border-blue-700 px-8 py-4 text-lg font-bold text-blue-700 transition hover:bg-blue-700 hover:text-white"
             >
               Llamar ahora
             </a>
