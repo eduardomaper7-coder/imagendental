@@ -19,81 +19,72 @@ const Hero = () => {
         backgroundAttachment: isMobile ? 'scroll' : 'fixed',
       }}
     >
-      {/* Overlay */}
       <div className="absolute inset-0 bg-blue-950/45"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-blue-600/20 via-blue-800/35 to-blue-950/80"></div>
 
-      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-4 pb-12 pt-24 text-center sm:pb-16 sm:pt-28">
+      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-4 pb-12 pt-24 text-center sm:pb-16 sm:pt-28">
         
-        {/* Título superior */}
-        <div className="mb-4 flex flex-col items-center sm:mb-6">
-          <span className="text-lg font-light tracking-widest text-white/80 sm:text-2xl">
+        <div className="mb-4 flex max-w-full flex-col items-center sm:mb-6">
+          <span className="max-w-full break-words text-sm font-light tracking-[0.18em] text-white/80 sm:text-2xl">
             CLÍNICA DENTAL EN PUENTE DE VALLECAS
           </span>
 
-          <span className="text-2xl font-extrabold tracking-wide text-white sm:text-3xl md:text-4xl">
+          <span className="mt-1 max-w-full break-words text-xl font-extrabold tracking-wide text-white sm:text-3xl md:text-4xl">
             IMAGEN DENTAL PABLO NERUDA
           </span>
         </div>
 
-        {/* H1 */}
-      <h1 className="mx-auto w-fit -translate-x-16 text-center text-3xl font-extrabold leading-tight text-white sm:text-5xl md:text-6xl lg:text-[4.8rem]">
-  <span className="block whitespace-nowrap">
-    Dentista en Puente de Vallecas
-  </span>
-  <span className="block whitespace-nowrap">
-    para cuidar tu sonrisa
-  </span>
-</h1>
+        <h1 className="mx-auto max-w-full text-center text-[2.15rem] font-extrabold leading-tight text-white sm:w-fit sm:-translate-x-16 sm:text-5xl md:text-6xl lg:text-[4.8rem]">
+          <span className="block sm:whitespace-nowrap">
+            Dentista en Puente de Vallecas
+          </span>
+          <span className="block sm:whitespace-nowrap">
+            para cuidar tu sonrisa
+          </span>
+        </h1>
 
-        {/* Texto */}
         <p className="mt-6 hidden max-w-3xl text-lg leading-9 text-white/90 sm:block sm:text-xl">
           En IMAGEN DENTAL PABLO NERUDA cuidamos tu salud bucodental con una
           atención cercana, tratamientos personalizados y un equipo comprometido
           con tu bienestar dental en Puente de Vallecas.
         </p>
 
-        {/* Badges */}
-        <div className="mt-6 flex flex-col gap-2 sm:mt-8 sm:flex-row sm:gap-3">
-          <span className="rounded-full bg-white/95 px-5 py-2 text-sm font-bold text-blue-700 shadow-lg sm:px-6 sm:py-3 sm:text-base">
+        <div className="mt-6 flex w-full max-w-full flex-col gap-2 sm:mt-8 sm:w-auto sm:flex-row sm:gap-3">
+          <span className="w-full break-words rounded-full bg-white/95 px-4 py-2 text-sm font-bold text-blue-700 shadow-lg sm:w-auto sm:px-6 sm:py-3 sm:text-base">
             Clínica dental en Puente de Vallecas
           </span>
 
-          <span className="rounded-full bg-white/95 px-5 py-2 text-sm font-bold text-blue-700 shadow-lg sm:px-6 sm:py-3 sm:text-base">
+          <span className="w-full break-words rounded-full bg-white/95 px-4 py-2 text-sm font-bold text-blue-700 shadow-lg sm:w-auto sm:px-6 sm:py-3 sm:text-base">
             Atención personalizada
           </span>
         </div>
 
-        {/* Botones */}
-        <div className="mt-8 flex w-full flex-col gap-3 sm:mt-10 sm:w-auto sm:flex-row">
-
+        <div className="mt-8 flex w-full max-w-full flex-col gap-3 sm:mt-10 sm:w-auto sm:flex-row">
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex w-full items-center justify-center gap-3 rounded-xl bg-blue-600 px-6 py-4 text-base font-extrabold text-white shadow-xl transition hover:bg-blue-700 sm:w-auto sm:px-8 sm:text-lg"
+            className="flex w-full min-w-0 items-center justify-center gap-3 rounded-xl bg-blue-600 px-4 py-4 text-sm font-extrabold text-white shadow-xl transition hover:bg-blue-700 sm:w-auto sm:px-8 sm:text-lg"
             aria-label="Pedir cita por WhatsApp en IMAGEN DENTAL PABLO NERUDA"
           >
             <img
               src="/whatsapp.png"
               alt=""
-              className="h-6 w-6 sm:h-7 sm:w-7"
+              className="h-6 w-6 shrink-0 sm:h-7 sm:w-7"
               aria-hidden="true"
             />
-            Pedir cita por WhatsApp
+            <span className="min-w-0 break-words">Pedir cita por WhatsApp</span>
           </a>
 
           <a
             href="tel:917789339"
-            className="flex w-full items-center justify-center rounded-xl bg-white/95 px-6 py-4 text-base font-extrabold text-blue-700 shadow-xl transition hover:bg-white sm:w-auto sm:px-8 sm:text-lg whitespace-nowrap"
+            className="flex w-full min-w-0 items-center justify-center rounded-xl bg-white/95 px-4 py-4 text-sm font-extrabold text-blue-700 shadow-xl transition hover:bg-white sm:w-auto sm:px-8 sm:text-lg sm:whitespace-nowrap"
             aria-label="Llamar a IMAGEN DENTAL PABLO NERUDA"
           >
             Llamar ahora
           </a>
-
         </div>
 
-        {/* Link servicios */}
         <a
           href="#servicios"
           className="mt-5 hidden items-center rounded-xl border border-white px-8 py-4 text-lg font-semibold text-white transition hover:bg-white hover:text-blue-700 sm:inline-flex"
@@ -101,7 +92,6 @@ const Hero = () => {
           Ver tratamientos dentales
         </a>
 
-        {/* Scroll */}
         <a
           href="#servicios"
           className="mt-12 hidden flex-col items-center text-base font-medium text-white sm:inline-flex"
@@ -111,7 +101,6 @@ const Hero = () => {
         </a>
       </div>
 
-      {/* Botón WhatsApp flotante */}
       <a
         href={whatsappUrl}
         target="_blank"
@@ -125,7 +114,6 @@ const Hero = () => {
           className="h-8 w-8 sm:h-10 sm:w-10"
         />
       </a>
-
     </section>
   )
 }
